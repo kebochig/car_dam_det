@@ -19,13 +19,9 @@ async def health():
 # async def get_car_damages(image: Image):
 #     return get_car_damage(image)
 
-# @app.get("/predict_damage/{image_url}")
-# async def get_car_damage(image_url):
-#     return get_car_damage(str(image_url))
-
-@app.get('/predict_damage/{full_path:path}')
-def pred_image(full_path: str):
-    return get_car_damage(full_path)
+@app.get('/predict_damage/{image_path:path}')
+def pred_image(image_path: str):
+    return get_car_damage(image_path)
 
 
 if __name__ == '__main__':
