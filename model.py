@@ -32,6 +32,11 @@ def get_car_damage(url):
     result['pred_boxes'] = pred_boxes
     result['Total_Number_of_Damages'] = Total_Number_of_Damages
 
+    print({
+        'statusCode': 200,
+        'body': result
+    })
+
     # Return it along with the status code of 200 meaning this was succesful 
     return {
         'statusCode': 200,
